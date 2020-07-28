@@ -1,0 +1,4 @@
+﻿  main.cpp
+d:\work\program(o\game\new game_20190702\new game\object.h(31): warning C4099: 'MotionData': type name first seen using 'class' now seen using 'struct'
+  d:\work\program(o\game\new game_20190702\new game\object.h(30): note: see declaration of 'MotionData'
+  new game.vcxproj -> D:\Work\Program(O\Game\new game_20190702\Debug\new game.exe
