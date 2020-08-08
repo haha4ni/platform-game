@@ -1,7 +1,8 @@
 #include "SceneState.h"
 
 SceneState::SceneState()
-{}
+{
+}
 SceneState::~SceneState()
 {}
 bool SceneState::Input(SDL_Event* e)
@@ -18,7 +19,11 @@ bool SceneState::Draw(SDL_Renderer* windowRenderer)
 }
 
 Title::Title()
-{}
+{
+	Sprite* grass = new Sprite("map.png", 0, 0, 32, 32);
+	this->map.push_back(grass);
+
+}
 Title::~Title()
 {}
 
@@ -39,6 +44,10 @@ bool Title::Update()
 bool Title::Draw(SDL_Renderer* windowRenderer)
 {
 	shalof.draw();
+	for (int i = 0;i < map.size();i++)
+	{
+		//map[i]->draw();
+	}
 
 	return 1;
 }

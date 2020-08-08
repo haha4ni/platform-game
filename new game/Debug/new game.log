@@ -1,4 +1,8 @@
-﻿  main.cpp
-d:\work\program(o\game\new game_20190702\new game\object.h(31): warning C4099: 'MotionData': type name first seen using 'class' now seen using 'struct'
-  d:\work\program(o\game\new game_20190702\new game\object.h(30): note: see declaration of 'MotionData'
-  new game.vcxproj -> D:\Work\Program(O\Game\new game_20190702\Debug\new game.exe
+﻿  SceneState.cpp
+C:\Users\Haha\Desktop\temp\platform-game\new game\Object.h(31,1): warning C4099: 'MotionData': 類型名稱之前使用 'class'，現在發現使用 'struct'
+C:\Users\Haha\Desktop\temp\platform-game\new game\Object.h(30): message : 請參閱 'MotionData' 的宣告
+C:\Users\Haha\Desktop\temp\platform-game\new game\SceneState.cpp(47,19): warning C4018: '<': signed/unsigned 不相符
+  Controller.cpp
+C:\Users\Haha\Desktop\temp\platform-game\new game\Object.h(31,1): warning C4099: 'MotionData': 類型名稱之前使用 'class'，現在發現使用 'struct'
+C:\Users\Haha\Desktop\temp\platform-game\new game\Object.h(30): message : 請參閱 'MotionData' 的宣告
+  new game.vcxproj -> C:\Users\Haha\Desktop\temp\platform-game\Debug\new game.exe

@@ -5,7 +5,10 @@
 //SDL include
 #include <SDL.h>
 #include "Object.h"
+#include "Sprite.h"
 #include "Player.h"
+
+#include <vector>
 
 class SceneState
 {
@@ -35,6 +38,7 @@ private:
 	int loading = 0;
 
 	Player shalof;
+	std::vector<Sprite*> map;
 };
 
 

@@ -74,9 +74,9 @@ bool Core::initSDL_()
 
 bool Core::initCore_()
 {
+	//TODO 物件剩一個 都改成靜態
 	graphics = new Graphics;
 	graphics->init();
-	Sprite::setGraphics(graphics);
 
 	timer = new TimerManager();
 	keyboard = new Keyboard();
