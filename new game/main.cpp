@@ -3,7 +3,7 @@
  */
 
 //Display console
-#pragma comment(linker, "/subsystem:windows /entry:WinMainCRTStartup")
+#pragma comment(linker, "/subsystem:console /entry:WinMainCRTStartup")
 //"/subsystem:console /entry:WinMainCRTStartup"
 
 //C include

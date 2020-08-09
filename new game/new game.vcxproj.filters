@@ -13,96 +13,93 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="資源檔\Core">
+    <Filter Include="原始程式檔\Core">
       <UniqueIdentifier>{b43a9bf4-1de3-45d5-a9c9-adc6f761c35c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="資源檔\P">
+    <Filter Include="原始程式檔\P">
       <UniqueIdentifier>{7e8afdd5-b193-4b56-ba4a-0178f80c6a9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\Graphice-level">
+      <UniqueIdentifier>{516402ed-a9f2-4967-9bc6-c342fedf2e1e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>資源檔</Filter>
-    </ClCompile>
-    <ClCompile Include="System.cpp">
-      <Filter>資源檔</Filter>
-    </ClCompile>
-    <ClCompile Include="SceneState.cpp">
-      <Filter>資源檔</Filter>
-    </ClCompile>
-    <ClCompile Include="Graphics.cpp">
-      <Filter>資源檔</Filter>
-    </ClCompile>
-    <ClCompile Include="Sprite.cpp">
-      <Filter>資源檔</Filter>
-    </ClCompile>
-    <ClCompile Include="AnimatedSprite.cpp">
-      <Filter>資源檔</Filter>
-    </ClCompile>
     <ClCompile Include="Core.cpp">
-      <Filter>資源檔\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="Controller.cpp">
-      <Filter>資源檔</Filter>
+      <Filter>原始程式檔\Core</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>資源檔\P</Filter>
+      <Filter>原始程式檔\P</Filter>
     </ClCompile>
     <ClCompile Include="StateMachine.cpp">
-      <Filter>資源檔\P</Filter>
+      <Filter>原始程式檔\P</Filter>
     </ClCompile>
     <ClCompile Include="Object.cpp">
-      <Filter>資源檔\P</Filter>
+      <Filter>原始程式檔\P</Filter>
     </ClCompile>
     <ClCompile Include="Config.cpp">
-      <Filter>資源檔\Core</Filter>
+      <Filter>原始程式檔\Core</Filter>
     </ClCompile>
     <ClCompile Include="Timer.cpp">
-      <Filter>資源檔\Core</Filter>
+      <Filter>原始程式檔\Core</Filter>
     </ClCompile>
     <ClCompile Include="Keyboard.cpp">
-      <Filter>資源檔\Core</Filter>
+      <Filter>原始程式檔\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="AnimatedSprite.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneState.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>原始程式檔</Filter>
+    </ClCompile>
+    <ClCompile Include="Graphics.cpp">
+      <Filter>原始程式檔\Graphice-level</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SceneState.h">
-      <Filter>標頭檔</Filter>
-    </ClInclude>
-    <ClInclude Include="Graphics.h">
-      <Filter>標頭檔</Filter>
-    </ClInclude>
-    <ClInclude Include="Sprite.h">
-      <Filter>標頭檔</Filter>
-    </ClInclude>
-    <ClInclude Include="AnimatedSprite.h">
-      <Filter>標頭檔</Filter>
-    </ClInclude>
     <ClInclude Include="Core.h">
-      <Filter>資源檔\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Controller.h">
-      <Filter>資源檔</Filter>
+      <Filter>原始程式檔\Core</Filter>
     </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>資源檔\P</Filter>
+      <Filter>原始程式檔\P</Filter>
     </ClInclude>
     <ClInclude Include="StateMachine.h">
-      <Filter>資源檔\P</Filter>
-    </ClInclude>
-    <ClInclude Include="Vector2.h">
-      <Filter>標頭檔</Filter>
-    </ClInclude>
-    <ClInclude Include="Object.h">
-      <Filter>標頭檔</Filter>
+      <Filter>原始程式檔\P</Filter>
     </ClInclude>
     <ClInclude Include="Config.h">
-      <Filter>資源檔\Core</Filter>
+      <Filter>原始程式檔\Core</Filter>
     </ClInclude>
     <ClInclude Include="Timer.h">
-      <Filter>資源檔\Core</Filter>
+      <Filter>原始程式檔\Core</Filter>
     </ClInclude>
     <ClInclude Include="Keyboard.h">
-      <Filter>資源檔\Core</Filter>
+      <Filter>原始程式檔\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>原始程式檔\P</Filter>
+    </ClInclude>
+    <ClInclude Include="AnimatedSprite.h">
+      <Filter>原始程式檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller.h">
+      <Filter>原始程式檔</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneState.h">
+      <Filter>原始程式檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>原始程式檔</Filter>
+    </ClInclude>
+    <ClInclude Include="Graphics.h">
+      <Filter>原始程式檔\Graphice-level</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

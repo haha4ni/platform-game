@@ -29,10 +29,10 @@ void Object::update()
 	this->motionData_->posY += this->motionData_->velY;
 
 
-	if (this->motionData_->posY >= 300)
+	if (this->motionData_->posY >= 400)
 	{
 		this->motionData_->velY = 0;
-		this->motionData_->posY = 300;
+		this->motionData_->posY = 400;
 	}
 }
 
@@ -49,4 +49,29 @@ void Object::setStateMachine(StateMachine* stateMachine)
 	delete this->stateMachine_;
 	this->stateMachine_ = stateMachine;
 	this->stateMachine_->setup();
+}
+
+
+
+
+Tile::Tile(string file_name, int blockX, int blockY, int blockWidth, int blockHeight)
+{
+	this->sprite_ = new Sprite(file_name, blockX, blockY, blockWidth, blockHeight);
+}
+Tile::~Tile()
+{
+
+}
+void Tile::setPos(int posX, int posY)
+{
+	posX_ = posX;
+	posY_ = posY;
+}
+void Tile::update()
+{
+
+}
+void Tile::draw()
+{
+	this->sprite_->draw(posX_, posY_, SDL_FLIP_NONE);
 }

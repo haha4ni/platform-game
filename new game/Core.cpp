@@ -76,7 +76,7 @@ bool Core::initCore_()
 {
 	//TODO 物件剩一個 都改成靜態
 	graphics = new Graphics;
-	graphics->init();
+	Graphics::init();
 
 	timer = new TimerManager();
 	keyboard = new Keyboard();
@@ -113,12 +113,12 @@ void Core::draw_()
 {
 	//SDL_Delay(Config::SCREEN_TICKS_PER_FRAME - (timer->getTicks() - currentTime));//借放 沒用倒
 
-	SDL_SetRenderDrawColor(graphics->getRenderer(), 0x3A, 0xA7, 0x99, 0xFF);
-	SDL_RenderClear(graphics->getRenderer());
-	sceneState->Draw(graphics->getRenderer());
+	SDL_SetRenderDrawColor(Graphics::getRenderer(), 193, 238, 255, 0xFF);
+	SDL_RenderClear(Graphics::getRenderer());
+	sceneState->Draw(Graphics::getRenderer());
 
 	//Update screen
-	SDL_RenderPresent(graphics->getRenderer());
+	SDL_RenderPresent(Graphics::getRenderer());
 
-	//printf("%lf\n", timer->updataFps());
+	//printf("\nFPS : %lf", timer->updataFps());
 }

@@ -12,19 +12,20 @@ SDL_Window* Graphics::window = NULL;
 SDL_Renderer* Graphics::renderer = NULL;
 std::map<std::string, SDL_Surface*> Graphics::spriteSheets_;
 
+/*
 Graphics::Graphics()
 {}
-
 Graphics::~Graphics()
 {
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 }
+*/
 
 bool Graphics::init()
 {
-	this->initWindow_();
-	this->initRenderer_();
+	Graphics::initWindow_();
+	Graphics::initRenderer_();
 
 	return 1;
 }
@@ -51,8 +52,8 @@ SDL_Window* Graphics::initWindow_()
 SDL_Renderer* Graphics::initRenderer_()
 {
 	//Create renderer for window
-	this->renderer = SDL_CreateRenderer(Graphics::window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
-	if (this->renderer == NULL)
+	Graphics::renderer = SDL_CreateRenderer(Graphics::window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+	if (Graphics::renderer == NULL)
 	{
 		printf("Renderer could not be created! SDL Error: %s\n", SDL_GetError());
 		return 0;
@@ -77,6 +78,7 @@ SDL_Surface* Graphics::loadImage(const std::string &filePath)
 {
 	if (Graphics::spriteSheets_.count(filePath) == 0) {
 		spriteSheets_[filePath] = IMG_Load(filePath.c_str());
+		SDL_SetColorKey(spriteSheets_[filePath], SDL_TRUE, SDL_MapRGB(spriteSheets_[filePath]->format, 0x3A, 0xA7, 0x99));//³z©ú¦â
 	}
 	return Graphics::spriteSheets_[filePath];
 }

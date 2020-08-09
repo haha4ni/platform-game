@@ -63,6 +63,34 @@ protected:
 	MotionData* motionData_;
 };
 
+
+class Tile
+{
+public:
+	Tile(std::string file_name, int blockX, int blockY, int blockWidth, int blockHeight);
+	~Tile();
+
+	void setPos(int posX, int poxY);
+	void update();
+	void draw();
+
+	//----------------------
+protected:
+	Sprite* sprite_;
+	int posX_=0, posY_=0;
+};
+
+
+
+
+
+
+
+
+
+
+
+
 #endif // !CHARACTER_H
 
 

@@ -23,7 +23,7 @@ namespace Shalof
 		this->Object_->changeAnimation("idle");
 		this->motionData_->velX = 0;
 		this->motionData_->velY = 0;+
-		printf("Idle\n");
+		printf("\nIdle");
 	}
 	void IdleState::update()
 	{
@@ -67,7 +67,7 @@ namespace Shalof
 	}
 	void WalkState::setup()
 	{
-		printf("Run\n");
+		printf("\nRun");
 		this->Object_->changeAnimation("run");
 		if (this->motionData_->direction == MotionData::Direction::LEFT)
 		{
@@ -138,7 +138,7 @@ namespace Shalof
 	}
 	void JumpState::setup()
 	{
-		printf("Jump\n");
+		printf("\nJump");
 		this->Object_->changeAnimation("jump");
 		//this->motionData_->velX = 0;
 		this->motionData_->velY = -10;
@@ -198,7 +198,7 @@ namespace Shalof
 	void FallState::setup()
 	{
 		this->Object_->changeAnimation("fall");
-		printf("Fall\n");
+		printf("\nFall");
 	}
 	void FallState::input(ControlKey key)
 	{

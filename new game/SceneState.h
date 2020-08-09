@@ -38,7 +38,8 @@ private:
 	int loading = 0;
 
 	Player shalof;
-	std::vector<Sprite*> map;
+	std::vector<Tile*> map;
+	Tile* back;
 };
 
 

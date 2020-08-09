@@ -17,10 +17,10 @@
 
 class Graphics {
 public:
-	Graphics();
-	~Graphics();
+	//Graphics();
+	//~Graphics();
 
-	bool init();
+	static bool init();
 	/* SDL_Surface* loadImage
 	 * Loads an image into the _spriteSheets map if it doesn't already exist.
 	 * As a result, each image will only ever be loaded once
@@ -42,8 +42,8 @@ private:
 	static SDL_Renderer* renderer;
 
 	// Initialization function
-	SDL_Window* initWindow_();
-	SDL_Renderer* initRenderer_();
+	static SDL_Window* initWindow_();
+	static SDL_Renderer* initRenderer_();
 };
 
 #endif // GRAPHICS_H
