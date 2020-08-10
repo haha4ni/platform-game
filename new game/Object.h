@@ -36,32 +36,21 @@ struct MotionData
 	};
 
 	Direction direction = RIGHT;
-	int posX = 150, posY = 0;
+	int posX = 200, posY = 0;
 	int velX = 0, velY = 0;//Velocity
 	//int prevWalkTimeL, prevWalkTimeR;
 };
 
-class Object
+struct CollisionBox
 {
-public:
-	Object();
-	~Object();
-	void setupAnimation();
-	
-
-	virtual void update();
-	virtual void draw();
-
-	//----------------------
-	virtual void setStateMachine(StateMachine* stateMachine);
-	void changeAnimation(std::string action);
-protected:
-	//GravityFactor* gravityFactor_;
-	StateMachine* stateMachine_;
-
-	AnimatedSprite* sprite_;
-	MotionData* motionData_;
+	int posX = 0, posY = 0;
+	int weight = 0, height = 0;
 };
+
+
+
+
+
 
 
 class Tile
@@ -74,16 +63,41 @@ public:
 	void update();
 	void draw();
 
-	//----------------------
+	CollisionBox getCollisionBox();
+
 protected:
 	Sprite* sprite_;
 	int posX_=0, posY_=0;
+
+	CollisionBox* collisionBox_;
 };
 
 
 
 
+class Object
+{
+public:
+	Object();
+	~Object();
+	void setupAnimation();
 
+	virtual void checkCollision(std::vector<Tile*> map);
+	//virtual void checkCollision(std::vector<Object*> object);
+	virtual void update();
+	virtual void draw();
+
+	//----------------------
+	virtual void setStateMachine(StateMachine* stateMachine);
+	void changeAnimation(std::string action);
+protected:
+	//GravityFactor* gravityFactor_;
+	StateMachine* stateMachine_;
+
+	AnimatedSprite* sprite_;
+	MotionData* motionData_;
+	CollisionBox* collisionBox_;
+};
 
 
 

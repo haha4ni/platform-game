@@ -5,6 +5,10 @@ Player::Player()
 {
 	//暫時開出一個夏露芙
 
+	//設定碰撞
+	struct CollisionBox* box = new CollisionBox{ 28, 12 ,18, 92};
+	this->collisionBox_ = box;
+
 	//設定sprite
 	//載入圖
 	this->sprite_ = new AnimatedSprite("Shalof_main.png");
@@ -20,6 +24,7 @@ Player::Player()
 	this->sprite_->addAnimation("jump", 1, tmp4, 0, 480, 80, 120);
 	int tmp5[5] = { 5,5,5,5,5 };
 	this->sprite_->addAnimation("fall", 5, tmp5, 0, 360, 80, 120);
+
 
 	//動作資料(座標 速度 狀態機)
 	motionData_ = new MotionData;

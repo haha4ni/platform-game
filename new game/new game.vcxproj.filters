@@ -19,7 +19,10 @@
     <Filter Include="原始程式檔\P">
       <UniqueIdentifier>{7e8afdd5-b193-4b56-ba4a-0178f80c6a9c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="原始程式檔\Graphice-level">
+    <Filter Include="原始程式檔\Map">
+      <UniqueIdentifier>{90a22dc2-3186-4e6f-87df-b610795e2157}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="原始程式檔\Graphic-level">
       <UniqueIdentifier>{516402ed-a9f2-4967-9bc6-c342fedf2e1e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -61,7 +64,7 @@
       <Filter>原始程式檔</Filter>
     </ClCompile>
     <ClCompile Include="Graphics.cpp">
-      <Filter>原始程式檔\Graphice-level</Filter>
+      <Filter>原始程式檔\Graphic-level</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -99,7 +102,7 @@
       <Filter>原始程式檔</Filter>
     </ClInclude>
     <ClInclude Include="Graphics.h">
-      <Filter>原始程式檔\Graphice-level</Filter>
+      <Filter>原始程式檔\Graphic-level</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

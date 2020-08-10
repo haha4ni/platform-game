@@ -18,6 +18,8 @@ protected:
 	MotionData* motionData_;
 };
 
+
+// 有控制器上身
 class ActiveStateMachine : public StateMachine
 {
 public:

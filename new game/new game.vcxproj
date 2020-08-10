@@ -42,6 +42,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(SolutionDir)new game\SDL2\SDL2-2.0.5\include;$(SolutionDir)new game\SDL2\SDL2_image-2.0.1\include;$(SolutionDir)new game\SDL2\SDL2_ttf-2.0.14\include;$(SolutionDir)new game\SDL2\SDL2_mixer-2.0.1\include;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)new game\SDL2\SDL2-2.0.5\lib\x86;$(SolutionDir)new game\SDL2\SDL2_image-2.0.1\lib\x86;$(SolutionDir)new game\SDL2\SDL2_ttf-2.0.14\lib\x86;$(SolutionDir)new game\SDL2\SDL2_mixer-2.0.1\lib\x86;$(LibraryPath)</LibraryPath>
+    <TargetName>start</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>C:\Users\Haha\Desktop\new game\new game\SDL2\SDL2_image-2.0.1\include;C:\Users\Haha\Desktop\new game\new game\SDL2\SDL2_mixer-2.0.1\include;C:\Users\Haha\Desktop\new game\new game\SDL2\SDL2_ttf-2.0.14\include;C:\Users\Haha\Desktop\new game\new game\SDL2\SDL2-2.0.5\include;$(IncludePath)</IncludePath>

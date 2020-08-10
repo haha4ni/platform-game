@@ -99,6 +99,7 @@ namespace Shalof
 			}
 			case KeyCode::CROSS:
 			{
+				if(this->motionData_->velY == 0)
 				this->Object_->setStateMachine(new Shalof::JumpState(this->Object_, this->motionData_));
 				break;
 			}

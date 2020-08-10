@@ -12,10 +12,7 @@ public:
 
 	virtual void update();
 	virtual void draw(int x, int y, SDL_RendererFlip flip);
-
 protected:
-	// TODO 這邊可以再優化，把底層依賴性去掉
-
 	//載入的圖檔
 	SDL_Texture* spriteSheet_;
 	//block座標 起始點x y 單塊的長寬

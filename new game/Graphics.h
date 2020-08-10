@@ -1,11 +1,6 @@
 #ifndef GRAPHICS_H
 #define GRAPHICS_H
 
-/* Graphics class
- * Holds all information dealing with graphics for the game
- * 控制程式視窗&圖形畫面底層
- */
-
 //C include
 #include <iostream>
 #include <string>
@@ -15,16 +10,19 @@
 #include <SDL.h>
 #include <SDL_image.h>
 
+
+/* 
+ * @brief Holds all information dealing with graphics for the game
+ *		  控制程式視窗&圖形畫面底層
+ */
 class Graphics {
 public:
 	//Graphics();
 	//~Graphics();
 
 	static bool init();
-	/* SDL_Surface* loadImage
-	 * Loads an image into the _spriteSheets map if it doesn't already exist.
-	 * As a result, each image will only ever be loaded once
-	 * Returns the image from the map regardless of whether or not it was just loaded
+	/* 
+	 * 載入圖片至管理庫
 	 */
 	static SDL_Surface* Graphics::loadImage(const std::string &filePath);
 

@@ -19,8 +19,6 @@ Sprite::Sprite(const std::string &filePath, int blockX, int blockY, int blockWid
 
 void Sprite::update()
 {
-	//¸I¼²³¡¤À?
-
 }
 
 void Sprite::draw(int x, int y, SDL_RendererFlip flip)
