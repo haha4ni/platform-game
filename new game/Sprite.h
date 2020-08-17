@@ -1,3 +1,12 @@
+/**
+  ******************************************************************************
+  * @file     Sprite.h
+  * @version
+  * @brief    單張圖片的讀取，分割Sprite，動圖會一次存很多個數據
+  *			  只負責精靈圖的繪畫
+  ******************************************************************************
+  */
+
 #ifndef SPRITE_H
 #define SPRITE_H
 
@@ -8,15 +17,15 @@ class Sprite
 public:
 	Sprite();
 	Sprite(const std::string &filePath, int blockX, int blockY, int blockWidth, int blockHeight);
-	~Sprite();
+	//~Sprite();
 
+	void loadImage(const std::string& filePath, int blockX, int blockY, int blockWidth, int blockHeight);
 	virtual void update();
 	virtual void draw(int x, int y, SDL_RendererFlip flip);
 protected:
-	//載入的圖檔
-	SDL_Texture* spriteSheet_;
-	//block座標 起始點x y 單塊的長寬
-	SDL_Rect blockRect_;
+	//圖檔資訊
+	SDL_Texture* spriteSheet_ = NULL;
+	SDL_Rect blockRect_ = SDL_Rect{0,0,0,0};
 };
 
 #endif //SPRITE_H

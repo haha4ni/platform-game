@@ -48,6 +48,15 @@ void Object::checkCollision(std::vector<Tile*> map)
 						this->motionData_->posX = temp.posX + temp.weight - this->collisionBox_->posX;
 					}
 
+		if ((this->motionData_->posY + this->collisionBox_->posY) < temp.posY + temp.height)
+			if ((this->motionData_->posY + this->collisionBox_->posY + this->collisionBox_->height) > temp.posY)
+				if ((this->motionData_->posX + this->collisionBox_->posX + this->collisionBox_->weight) > temp.posX)
+					if ((this->motionData_->posX + this->collisionBox_->posX + this->collisionBox_->weight) < temp.posX + temp.weight)
+					{
+						this->motionData_->velX = 0;
+						this->motionData_->posX = temp.posX - this->collisionBox_->posX - this->collisionBox_->weight;//TODO
+					}
+
 	}
 
 

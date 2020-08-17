@@ -31,34 +31,34 @@ Title::Title()
 		this->map.push_back(grass);
 	}*/
 
-	for (int i = 0;i < 1;i++)
+	for (int i = 27;i < 27+1;i++)
 	{
 		Tile* grass = new Tile("map.png", 0, 32, 32, 32);
-		grass->setPos(i * 32, 504 - 32 - 32-32);
+		grass->setPos(i * 32, 504 - 32 - 32);
 		this->map.push_back(grass);
 	}
-	for (int i = 0;i < 4;i++)
+	for (int i = 22;i < 20+4;i++)
 	{
 		Tile* grass = new Tile("map.png", 0, 32, 32, 32);
 		grass->setPos(i * 32, 504-32-32);
 		this->map.push_back(grass);
 	}
 
-	for (int i = 0;i < 6;i++)
+	for (int i = 21;i < 20+6;i++)
 	{
 		Tile* grass = new Tile("map.png", 0, 32, 32, 32);
 		grass->setPos(i * 32, 504-32);
 		this->map.push_back(grass);
 	}
 
-	for (int i = 0;i < 20;i++)
+	for (int i = 5;i < 20;i++)
 	{
 		Tile* grass = new Tile("map.png", 0, 32, 32, 32);
 		grass->setPos( i * 32,504);
 		this->map.push_back(grass);
 	}
 
-	for (int i = 0;i < 20;i++)
+	for (int i = 5;i < 20;i++)
 	{
 		Tile* grass = new Tile("map.png", 0, 64, 32, 32);
 		grass->setPos(i * 32, 504 + 32 * 1);
@@ -67,7 +67,7 @@ Title::Title()
 
 
 
-	for (int i = 0;i < 20;i++)
+	for (int i = 5;i < 20;i++)
 		for (int j = 2;j < 5;j++)
 		{
 			Tile* grass = new Tile("map.png", 0, 96, 32, 32);

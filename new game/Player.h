@@ -9,6 +9,8 @@ class Player : public Object
 public:
 	Player();
 	~Player();
+
+	void update();
 	void setStateMachine(StateMachine* stateMachine);
 	Controller* controller_;
 };

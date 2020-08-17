@@ -1,12 +1,14 @@
 #include "Player.h"
 #include "Controller.h"
 
+#include "Config.h"
+
 Player::Player()
 {
 	//暫時開出一個夏露芙
 
 	//設定碰撞
-	struct CollisionBox* box = new CollisionBox{ 28, 12 ,18, 92};
+	struct CollisionBox* box = new CollisionBox{ 28, 12 ,23, 92};
 	this->collisionBox_ = box;
 
 	//設定sprite
@@ -48,6 +50,12 @@ Player::Player()
 
 Player::~Player()
 {
+}
+
+void Player::update()
+{
+	Object::update();
+	Camera::update(motionData_->posX, motionData_->posY);
 }
 
 void Player::setStateMachine(StateMachine * stateMachine)

@@ -10,13 +10,16 @@ using namespace std;
 
 SDL_Window* Graphics::window = NULL;
 SDL_Renderer* Graphics::renderer = NULL;
-std::map<std::string, SDL_Surface*> Graphics::spriteSheets_;
+std::map<std::string, SDL_Surface*> Graphics::surface_list_;
+std::map<std::string, SDL_Texture*> Graphics::texture_list_;
 
 /*
-Graphics::Graphics()
-{}
+Graphics::Graphics(){}
 Graphics::~Graphics()
 {
+	SDL_FreeSurface( loadedSurface );//清除記憶體用
+	SDL_DestroyTexture( texture );//清除記憶體用
+
 	SDL_DestroyRenderer(renderer);
 	SDL_DestroyWindow(window);
 }
@@ -74,20 +77,32 @@ SDL_Renderer* Graphics::getRenderer()
 	return Graphics::renderer;
 }
 
-SDL_Surface* Graphics::loadImage(const std::string &filePath)
+SDL_Texture* Graphics::loadImage(const std::string &filePath)
 {
-	if (Graphics::spriteSheets_.count(filePath) == 0) {
-		spriteSheets_[filePath] = IMG_Load(filePath.c_str());
-		SDL_SetColorKey(spriteSheets_[filePath], SDL_TRUE, SDL_MapRGB(spriteSheets_[filePath]->format, 0x3A, 0xA7, 0x99));//透明色
+	if (Graphics::surface_list_.count(filePath) == 0) {
+		surface_list_[filePath] = IMG_Load(filePath.c_str());
+		SDL_SetColorKey(surface_list_[filePath], SDL_TRUE, SDL_MapRGB(surface_list_[filePath]->format, 0x3A, 0xA7, 0x99));//透明色
 	}
-	return Graphics::spriteSheets_[filePath];
+	if (Graphics::texture_list_.count(filePath) == 0) {
+		texture_list_[filePath] = SDL_CreateTextureFromSurface(Graphics::getRenderer(), surface_list_[filePath]);
+	}
+
+	return Graphics::texture_list_[filePath];
+}
+
+void Graphics::freeOneImage(const std::string& filePath)
+{
+}
+
+void Graphics::freeAllImage()
+{
 }
 
 void Graphics::render(SDL_Texture* texture, int x, int y, SDL_Rect* block, SDL_RendererFlip rotate)
 {
 	//Set rendering space and render to screen
 	//目標位置、拉伸寬高
-	SDL_Rect renderQuad = { x, y, block->w, block->h };
+	SDL_Rect renderQuad = { x- Camera::cameraX, y - Camera::cameraY, block->w, block->h };
 
 	if (!rotate)
 		SDL_RenderCopy(Graphics::renderer, texture, block, &renderQuad);

@@ -15,4 +15,16 @@ public:
 };
 
 
+class Camera
+{
+public:
+	static void setPlayerPos(int x, int y);
+	static void update(int x, int y);
+	static int cameraX;
+	static int cameraY;
+};
+//Center the camera over the dot
+
+
+
 #endif
